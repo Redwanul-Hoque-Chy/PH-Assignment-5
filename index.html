@@ -15,9 +15,9 @@
         }
     </style>
 </head>
-<body class="poppins bg-[#F4F7FF] min-h-screen">
+<body class="poppins bg-[#F4F7FF] min-h-screen" id="body-bg">
     <header class="md:container mx-auto">
-        <div class="navbar bg-base-100 rounded-xl flex justify-around p-[20px]">
+        <div class="navbar bg-base-100 rounded-xl flex justify-around p-[20px] shadow-sm">
             <div class="flex-1">
                 <div class="flex items-center text-[#00303C]">
                     <img src="./assets/logo.png" class="w-[40px]"><span class="text-xl lg:text-2xl">Dev</span><span class="font-bold text-xl lg:text-2xl">Board</span>
@@ -26,9 +26,11 @@
             <div class="flex-1 justify-items-end">
                 <div class="flex gap-[10px]">
                     <div class="flex items-center text-[#00303C] rounded-[32px] bg-[#F4F7FF] py-[16px] px-[20px] gap-[10px] w-[122px]">
-                        <img src="./assets/checkbox.png" class="w-[32px] h-[32px]"><span id="task-count" class="text-xl lg:text-2xl text-[#1E1E1E] font-bold w-[48px]">0</span>
+                        <img src="./assets/checkbox.png" class="w-[32px] h-[32px]"><span id="task-count" class="text-xl lg:text-2xl text-[#1E1E1E] font-bold w-[48px]">12</span>
                     </div>
-                    <img src="./assets/theme-btn.png" class="w-[64px] h-[64px] rounded-[50%] bg-[#F4F7FF] p-[12px]">
+                    <div class="rounded-[50%] bg-[#F4F7FF] p-[12px] w-[64px]">
+                        <img src="./assets/theme-btn.png" class="w-[40px] h-[40px]" id="bg-change">
+                    </div>
                 </div>
             </div>
         </div>
@@ -44,7 +46,7 @@
                             </div>
                             <div>
                                 <h6 class="text-[#00303C] font-medium text-base lg:text-lg">Task Assigned</h6>
-                                <p id="task-assign" class="text-lg lg:text-2xl text-[#1E1E1E] font-bold">0</p>
+                                <p id="task-assign" class="text-lg lg:text-2xl text-[#1E1E1E] font-bold">6</p>
                             </div>
                         </div>
                     </div>
@@ -52,7 +54,7 @@
                         <div class="flex gap-[15px] px-[10px] lg:px-[30px] items-center">
                             <img src="./assets/board.png" class="w-[79px] h-[79px]">
                             <div>
-                                <a class="text-[#00303C] font-medium text-sm lg:text-base text-white" href="blog.html">Discover Something<br>New Today!</a>
+                                <a class="text-[#00303C] font-medium text-sm lg:text-base text-white" href="blog.html">Discover Something New Today!</a>
                             </div>
                         </div>
                     </div>
@@ -62,8 +64,8 @@
                                 <img src="./assets/calender.png" class="w-[25px] h-[25px]">
                             </div>
                             <div>
-                                <h6 class="text-[#00303C] font-medium text-xl lg:text-lg" id="current-day">0</h6>
-                                <p id="task-assign" class="text-lg lg:text-2xl text-[#1E1E1E] font-bold" id="current-date">0</p>
+                                <span class="text-[#00303C] font-medium text-xl lg:text-lg" id="current-day"></span>, <br>
+                                <span class="text-lg lg:text-xl text-[#1E1E1E] font-bold" id="current-date"></span>
                             </div>
                         </div>
                     </div>
@@ -75,13 +77,13 @@
                             <div class="text-[#00303C]">
                                 <span class="bg-white px-[10px] py-[5px] rounded-sm">ShopEase</span>
                             </div>
-                            <h2 class="card-title text-lg lg:text-xl py-[10px]" id="task-1-name">Fix Mobile Button Issue </h2>
+                            <h2 class="card-title text-lg lg:text-xl py-[10px]" id="task-1-name">Fix Mobile Button Issue</h2>
                             <p class="text-sm lg:text-base overflow-hidden text-ellipsis whitespace-nowrap rounded-sm bg-white text-[#000000] p-[10px]" title="Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly</p>
                             <hr class="border-dashed  border-[rgba(55,82,253,.2)]">
-                            <div class="card-actions flex justify-between">
+                            <div class="flex justify-between">
                                 <div>
                                     <p class="text-sm lg:text-sm text-[#00303C]">Deadline</p>
-                                    <p class="text-sm lg:text-base text-[#00303C] font-medium" class="current-dates">0</p>
+                                    <p class="text-sm lg:text-base text-[#00303C] font-medium">21 March 2025</p>
                                 </div>
                                 <div>
                                     <button id="task-1" class="text-white font-medium bg-[#3752FD] px-[15px] py-[10px] rounded-lg text-sm lg:text-base">Completed</button>
@@ -98,10 +100,10 @@
                             <h2 class="card-title text-lg lg:text-xl py-[10px]" id="task-2-name">Add Dark Mode</h2>
                             <p class="text-sm lg:text-base overflow-hidden text-ellipsis whitespace-nowrap rounded-sm bg-white text-[#000000] p-[10px]" title="Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.">Store the user's preference in localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p>
                             <hr class="border-dashed  border-[rgba(55,82,253,.2)]">
-                            <div class="card-actions flex justify-between">
+                            <div class="flex justify-between">
                                 <div>
                                     <p class="text-sm lg:text-sm text-[#00303C]">Deadline</p>
-                                    <p class="text-sm lg:text-base text-[#00303C] font-medium" class="current-dates">0</p>
+                                    <p class="text-sm lg:text-base text-[#00303C] font-medium">21 March 2025</p>
                                 </div>
                                 <div>
                                     <button id="task-2" class="text-white font-medium bg-[#3752FD] px-[15px] py-[10px] rounded-lg text-sm lg:text-base">Completed</button>
@@ -118,10 +120,10 @@
                             <h2 class="card-title text-lg lg:text-xl py-[10px]" id="task-3-name">Optimize Home page </h2>
                             <p class="text-sm lg:text-base overflow-hidden text-ellipsis whitespace-nowrap rounded-sm bg-white text-[#000000] p-[10px]" title="Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly</p>
                             <hr class="border-dashed  border-[rgba(55,82,253,.2)]">
-                            <div class="card-actions flex justify-between">
+                            <div class="flex justify-between">
                                 <div>
                                     <p class="text-sm lg:text-sm text-[#00303C]">Deadline</p>
-                                    <p class="text-sm lg:text-base text-[#00303C] font-medium" class="current-dates">0</p>
+                                    <p class="text-sm lg:text-base text-[#00303C] font-medium">21 March 2025</p>
                                 </div>
                                 <div>
                                     <button id="task-3" class="text-white font-medium bg-[#3752FD] px-[15px] py-[10px] rounded-lg text-sm lg:text-base">Completed</button>
@@ -138,10 +140,10 @@
                             <h2 class="card-title text-lg lg:text-xl py-[10px]" id="task-4-name">Add new emoji 🤲</h2>
                             <p class="text-sm lg:text-base overflow-hidden text-ellipsis whitespace-nowrap rounded-sm bg-white text-[#000000] p-[10px]" title="Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly</p>
                             <hr class="border-dashed  border-[rgba(55,82,253,.2)]">
-                            <div class="card-actions flex justify-between">
+                            <div class="flex justify-between">
                                 <div>
                                     <p class="text-sm lg:text-sm text-[#00303C]">Deadline</p>
-                                    <p class="text-sm lg:text-base text-[#00303C] font-medium" class="current-dates">0</p>
+                                    <p class="text-sm lg:text-base text-[#00303C] font-medium">21 March 2025</p>
                                 </div>
                                 <div>
                                     <button id="task-4" class="text-white font-medium bg-[#3752FD] px-[15px] py-[10px] rounded-lg text-sm lg:text-base">Completed</button>
@@ -158,10 +160,10 @@
                             <h2 class="card-title text-lg lg:text-xl py-[10px]" id="task-5-name">Integrate OpenAI API </h2>
                             <p class="text-sm lg:text-base overflow-hidden text-ellipsis whitespace-nowrap rounded-sm bg-white text-[#000000] p-[10px]" title="Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly</p>
                             <hr class="border-dashed  border-[rgba(55,82,253,.2)]">
-                            <div class="card-actions flex justify-between">
+                            <div class="flex justify-between">
                                 <div>
                                     <p class="text-sm lg:text-sm text-[#00303C]">Deadline</p>
-                                    <p class="text-sm lg:text-base text-[#00303C] font-medium" class="current-dates">0</p>
+                                    <p class="text-sm lg:text-base text-[#00303C] font-medium">21 March 2025</p>
                                 </div>
                                 <div>
                                     <button id="task-5" class="text-white font-medium bg-[#3752FD] px-[15px] py-[10px] rounded-lg text-sm lg:text-base">Completed</button>
@@ -177,11 +179,11 @@
                             </div>
                             <h2 class="card-title text-lg lg:text-xl py-[10px]" id="task-6-name">Improve Job searching </h2>
                             <p class="text-sm lg:text-base overflow-hidden text-ellipsis whitespace-nowrap rounded-sm bg-white text-[#000000] p-[10px]" title="Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly</p>
-                            <hr class="border-dashed  border-[rgba(55,82,253,.2)]">
-                            <div class="card-actions flex justify-between">
+                            <hr class="border-dashed border-[rgba(55,82,253,.2)]">
+                            <div class="flex justify-between">
                                 <div>
                                     <p class="text-sm lg:text-sm text-[#00303C]">Deadline</p>
-                                    <p class="text-sm lg:text-base text-[#00303C] font-medium" class="current-dates">0</p>
+                                    <p class="text-sm lg:text-base text-[#00303C] font-medium">21 March 2025</p>
                                 </div>
                                 <div>
                                     <button id="task-6" class="text-white font-medium bg-[#3752FD] px-[15px] py-[10px] rounded-lg text-sm lg:text-base">Completed</button>
@@ -196,7 +198,10 @@
                     <img src="./assets/activity.png">Activity Log
                 </div>
                 <div class="flex justify-center mt-[10px]">
-                    <button class="text-white font-medium bg-[#3752FD] px-[15px] py-[10px] rounded-lg text-sm lg:text-base">Clear History</button>
+                    <button id="clear-history" class="text-white font-medium bg-[#3752FD] px-[15px] py-[10px] rounded-lg text-sm lg:text-base">Clear History</button>
+                </div>
+                <div id="history-text">
+
                 </div>
             </div>
         </div>

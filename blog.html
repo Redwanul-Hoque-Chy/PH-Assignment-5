@@ -15,56 +15,68 @@
             }
         </style>
     </head>
-    <body class="poppins bg-[#F4F7FF]">
+    <body class="poppins bg-[#F4F7FF] min-h-screen">
         <header class="md:container mx-auto">
-            <div class="navbar bg-base-100 rounded-xl flex justify-around p-[20px]">
+            <div class="navbar bg-base-100 rounded-xl flex justify-around p-[20px] shadow-sm">
                 <div class="flex-1">
                     <div class="flex items-center text-[#00303C]">
                         <img src="./assets/logo.png" class="w-[40px]"><span class="text-xl lg:text-2xl">Dev</span><span class="font-bold text-xl lg:text-2xl">Board</span>
                     </div>
                 </div>
                 <div class="flex-1 justify-items-end text-right">
-                    <a href="index.html" class="text-white font-medium bg-[#3752FD] px-[15px] py-[10px] rounded-lg text-sm lg:text-base">Back to Home</a>
+                    <a href="index.html" class="text-white font-medium bg-[#3752FD] px-[15px] py-[10px] rounded-lg text-sm lg:text-base">Back to Desk</a>
                 </div>
             </div>
         </header>
-        <main class="md:container mx-auto bg-base-100 rounded-xl p-[20px] my-[20px]">
-            <h6 class="text-lg lg:text-xl text-[#00303C] fot-bold my-[10px]">Question-1: What are the different ways to select an element in the DOM?</h6>
-            <p class="text-base lg:text-lg text-[#00303C]">Answer:</p>
-            <p class="text-base lg:text-lg text-[#00303C] pl-[40px]">
-                Five ways to select an element in the DOM. Those are:
-                1. getElementsByTagName<br>
-                2.getElementById<br>
-                3.getElementsByClassName<lbr>
-                4.querySelector<br>
-                5.querySelectorAll
-            </p>
+        <main class="md:container mx-auto rounded-xl my-[40px]">
+            <div class="bg-white mb-[10px]">
+                <h6 class="text-lg lg:text-xl text-[#00303C] fot-bold p-[20px]">Question-1: What are the different ways to select an element in the DOM?</h6>
+                <hr class="border-dashed border-[rgba(55,82,253,.2)]">
+                <p class="text-base lg:text-lg text-[#00303C] p-[20px]">
+                    Five ways to select an element in the DOM. Those are:<br>
+                    1. getElementsByTagName<br>
+                    2. getElementById<br>
+                    3. getElementsByClassName<lbr>
+                    4. querySelector<br>
+                    5. querySelectorAll
+                </p>
+            </div>
 
-            <h6 class="text-lg lg:text-xl text-[#00303C] fot-bold my-[10px]">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h6>
-            <p class="text-base lg:text-lg text-[#00303C]">Answer:</p>
-            <p class="text-base lg:text-lg text-[#00303C] pl-[40px]">
-                innerHTML is taking all text in the node inluding html tag.<br>
-                innerText is taking all visible text in th node without html tag.<br>
-                textContent is taking all text inluding spec also in th node without html tag.<br>
-            </p>
+            <div class="bg-white mb-[10px]">
+                <h6 class="text-lg lg:text-xl text-[#00303C] fot-bold p-[20px]">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h6>
+                <hr class="border-dashed border-[rgba(55,82,253,.2)]">
+                <p class="text-base lg:text-lg text-[#00303C] p-[20px]">
+                    innerHTML is taking all text in the node inluding html tag.<br>
+                    innerText is taking all visible text in th node without html tag.<br>
+                    textContent is taking all text inluding spec also in th node without html tag.<br>
+                </p>
+            </div>
 
-            <h6 class="text-lg lg:text-xl text-[#00303C] fot-bold my-[10px]">Question-3: What is event delegation in the DOM?</h6>
-            <p class="text-base lg:text-lg text-[#00303C]">Answer:</p>
-            <p class="text-base lg:text-lg text-[#00303C] pl-[40px]">
-                
-            </p>
+            <div class="bg-white mb-[10px]">
+                <h6 class="text-lg lg:text-xl text-[#00303C] fot-bold p-[20px]">Question-3: What is event delegation in the DOM?</h6>
+                <hr class="border-dashed border-[rgba(55,82,253,.2)]">
+                <p class="text-base lg:text-lg text-[#00303C] p-[20px]">
+                    Event delegation is event that handle particular target.
+                </p>  
+            </div>
 
-            <h6 class="text-lg lg:text-xl text-[#00303C] fot-bold my-[10px]">Question-4: What is event bubbling in the DOM?</h6>
-            <p class="text-base lg:text-lg text-[#00303C]">Answer:</p>
-            <p class="text-base lg:text-lg text-[#00303C] pl-[40px]">
-                
-            </p>
+            <div class="bg-white mb-[10px]">
+                <h6 class="text-lg lg:text-xl text-[#00303C] fot-bold p-[20px]">Question-4: What is event bubbling in the DOM?</h6>
+                <hr class="border-dashed border-[rgba(55,82,253,.2)]">
+                <p class="text-base lg:text-lg text-[#00303C] p-[20px]">
+                    Event bubbling is event bubbles up to its parent and to root element.
+                </p>
+            </div>
 
-            <h6 class="text-lg lg:text-xl text-[#00303C] fot-bold my-[10px]">Question-5: How do you create, add, and remove elements using JavaScript?</h6>
-            <p class="text-base lg:text-lg text-[#00303C]">Answer:</p>
-            <p class="text-base lg:text-lg text-[#00303C] pl-[40px]">
-                To create element method is documet.getElement().<br>
-            </p>
+            <div class="bg-white mb-[10px]">
+                <h6 class="text-lg lg:text-xl text-[#00303C] fot-bold p-[20px]">Question-5: How do you create, add, and remove elements using JavaScript?</h6>
+                <hr class="border-dashed border-[rgba(55,82,253,.2)]">
+                <p class="text-base lg:text-lg text-[#00303C] p-[20px]">
+                    To create element method is document.createElement().<br>
+                    To add element method is element.appendChild();<br>
+                    To remove element method is element.remove();
+                </p>
+            </div>
         </main>
     </body>
 </html>
